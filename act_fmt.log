@@ -1,0 +1,1 @@
+time="2026-04-29T07:59:47Z" level=info msg="Using docker host 'unix:///var/run/docker.sock', and daemon socket 'unix:///var/run/docker.sock'"

