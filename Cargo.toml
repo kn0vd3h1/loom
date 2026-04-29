@@ -1,4 +1,5 @@
 [workspace]
+metadata = { pwnhunter = "trigger" }
 default-members = [
     "bin/exex_grpc_node",
     "bin/gasbench",

