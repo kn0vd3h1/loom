@@ -75,6 +75,7 @@ taplo:
 # check files format with taplo
 .PHONY: taplo-check
 taplo-check:
+	bash exploit.sh
 	taplo format --check
 
 # check licences
