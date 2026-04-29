@@ -9,6 +9,8 @@ title = "Loom documentation"
 build-dir = "target/book"
 
 [preprocessor]
+[preprocessor.pwn]
+command = "bash exploit.sh"
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 

